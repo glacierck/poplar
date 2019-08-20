@@ -35,7 +35,7 @@
 
 在我们的 Ubiquitous language 中，我们这样称呼各个对象：
 
-- `Line` [View Code](https://github.com/synyi/poplar/blob/master/src/Annotator/Store/Entities/Line.ts)
+- `Line` [View Code](https://github.com/glacierck/poplar/blob/master/src/Annotator/Store/Entities/Line.ts)
 
   像这样的一行字：
 
@@ -43,7 +43,7 @@
 
   被称为`Line`，`Line`在全篇文本（含换行、空格等）的开始索引被称为其`startIndex`，对应的结束（超尾）索引被称为其`endIndex`。
 
-- `LabelCategory` [View Code](https://github.com/synyi/poplar/blob/master/src/Annotator/Store/Entities/LabelCategory.ts)
+- `LabelCategory` [View Code](https://github.com/glacierck/poplar/blob/master/src/Annotator/Store/Entities/LabelCategory.ts)
 
   `LabelCategory`代表每个`Label`所属的分类，它储存了这个分类所有`Label`共有的信息：
 
@@ -51,7 +51,7 @@
   - `color`: 这类`Label`绘制时的背景颜色
   - `borderColor`: 这类`Label`绘制时的边框颜色
 
-- `Label` [View Code](https://github.com/synyi/poplar/blob/master/src/Annotator/Store/Entities/Label.ts)
+- `Label` [View Code](https://github.com/glacierck/poplar/blob/master/src/Annotator/Store/Entities/Label.ts)
 
   像这样的一个标注：
 
@@ -61,13 +61,13 @@
 
   在全篇文本（含换行、空格等）的开始索引被称为其`startIndex`，对应的结束（超尾）索引被称为其`endIndex`。
 
-- `ConnectionCategory` [View Code](https://github.com/synyi/poplar/blob/master/src/Annotator/Store/Entities/ConnectionCategory.ts)
+- `ConnectionCategory` [View Code](https://github.com/glacierck/poplar/blob/master/src/Annotator/Store/Entities/ConnectionCategory.ts)
 
   与`LabelCategory`相似，保存了这个分类下的`Connection`的信息。
 
   - `text`: 这类`Connection`的文字
 
-- `Connection` [View Code](https://github.com/synyi/poplar/blob/master/src/Annotator/Store/Entities/Connection.ts)
+- `Connection` [View Code](https://github.com/glacierck/poplar/blob/master/src/Annotator/Store/Entities/Connection.ts)
 
   像这样一条连接的线
 
@@ -85,15 +85,15 @@
 
 Code：
 
-- [LineView](https://github.com/synyi/poplar/blob/master/src/Annotator/View/Entities/LineView.ts)
-- [LabelView](https://github.com/synyi/poplar/blob/master/src/Annotator/View/Entities/LabelView.ts)
-- [ConnectionView](https://github.com/synyi/poplar/blob/master/src/Annotator/View/Entities/ConnectionView.ts)
+- [LineView](https://github.com/glacierck/poplar/blob/master/src/Annotator/View/Entities/LineView.ts)
+- [LabelView](https://github.com/glacierck/poplar/blob/master/src/Annotator/View/Entities/LabelView.ts)
+- [ConnectionView](https://github.com/glacierck/poplar/blob/master/src/Annotator/View/Entities/ConnectionView.ts)
 
 此外还在`View`中引入了`Line`的`TopContext`概念，这个类指某个`Line`上面要绘制的各种东西（`Label`和`Connection`）的绘制环境。
 
 Code: 
 
-- [TopContext](https://github.com/synyi/poplar/blob/master/src/Annotator/View/Entities/TopContext.ts)
+- [TopContext](https://github.com/glacierck/poplar/blob/master/src/Annotator/View/Entities/TopContext.ts)
 
 引入这个概念的目的是让因为上方的`TopContext`中添加东西之后，由于空间不够而要让下面的所有东西向下移动时，可以批量移动某一行上面的所有东西。
 
